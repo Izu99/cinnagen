@@ -13,6 +13,7 @@ const Analyze = () => {
         return () => clearTimeout(redirectTimer);
     }, [navigate]);
 
+    
     return (
         <div className="flex h-full items-center justify-center">
             <div className="flex flex-col items-center justify-center">
