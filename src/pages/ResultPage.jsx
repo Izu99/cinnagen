@@ -40,6 +40,18 @@ const Results = ({ results = [] }) => {
                 "Wash leaves with a mild soap solution to remove the mold.",
             ],
         },
+        {
+            id: 4,
+            imageSrc:
+                "https://th.bing.com/th/id/R.bf7ea6c464bd98110accbe562efd8556?rik=1GFn3Ka0XH%2bnqQ&pid=ImgRaw&r=0",
+            imageAlt: "Leaf with Black Sooty Mold",
+            disease: "Black Sooty Mold",
+            confidenceLevel: "82%",
+            suggestions: [
+                "Control infestations of sap-sucking insects (e.g., aphids, whiteflies).",
+                "Wash leaves with a mild soap solution to remove the mold.",
+            ],
+        },
     ];
 
     // Use provided results or sample data if no results are provided
