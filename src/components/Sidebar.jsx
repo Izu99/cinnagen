@@ -81,7 +81,7 @@ const SideBar = () => {
                 )}
             </motion.div>
 
-            <div className="flex-grow overflow-hidden">
+            <div className={`flex-grow overflow-hidden ${collapsed ? "mt-5" : "-mt-5"}`}>
                 {menuItems.map((item, index) => (
                     <motion.div
                         key={item.name}
@@ -117,7 +117,7 @@ const SideBar = () => {
             <div className="px-2 mt-auto">
                 <button
                     onClick={() => setCollapsed(!collapsed)}
-                    className="w-full flex items-center  hover:bg-green-600 p-3 rounded-lg transition-colors border-2 border-white"
+                    className="w-full flex items-center  hover:bg-green-800/20 p-3 rounded-lg transition-colors border-2 border-white"
                 >
                     <motion.div
                         animate={{ rotate: collapsed ? 180 : 0 }}
