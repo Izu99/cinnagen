@@ -114,7 +114,7 @@ const AgeResults = ({ results = [] }) => {
             </div>
 
             <div className="flex justify-end mt-6">
-                <Link to="/disease-identifier">
+                <Link to="/age-identifier">
                     <button
                         onClick={handleIdentifyAnother}
                         className="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg flex items-center"
