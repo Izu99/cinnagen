@@ -5,7 +5,7 @@ import { MdArrowDropDown, MdArrowDropUp } from "react-icons/md";
 import SideBar from "./components/Sidebar";
 import Dashboard from "./pages/Dashboard";
 import DiseaseIdentifier from "./pages/ImageUpload";
-// import AgeIdentifier from "./pages/AgeIdentifier";
+import AgeIdentifier from "./pages/AgeIdentifier";
 // import MarketTrends from "./pages/MarketTrends";
 import "./App.css";
 import { useState } from "react";
