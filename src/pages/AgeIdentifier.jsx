@@ -117,7 +117,7 @@ const AgeIdentifier = () => {
 
             <div className="mb-6">
                 <h1 className="text-2xl font-semibold mb-2">
-                    Upload your leaf images to analyze using AI-based Age Ientify algorithm
+                    Upload your leaf images to analyze using AI-based Age Identify algorithm
                 </h1>
             </div>
 

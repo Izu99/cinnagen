@@ -18,7 +18,7 @@ function App() {
 
     return (
         <Router>
-            <div className="flex bg-green-600">
+            <div className="flex bg-green-100">
                 <SideBar />
                 <div className="flex-1 p-4">
                     <div className="flex justify-end mb-4">
