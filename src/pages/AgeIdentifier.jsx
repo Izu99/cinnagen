@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef} from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MdCloudUpload, MdClose, MdArrowForward } from "react-icons/md";
 import Header from "../components/Header";
@@ -107,9 +107,9 @@ const AgeIdentifier = () => {
         return `${(kb / 1024).toFixed(1)}MB`;
     };
 
-    const getFileSizeDisplay = (file) => {
-        return `${formatFileSize(file.size)} / 5MB`;
-    };
+    // const getFileSizeDisplay = (file) => {
+    //     return `${formatFileSize(file.size)} / 5MB`;
+    // };
 
     return (
         <div className="w-full">
@@ -117,7 +117,9 @@ const AgeIdentifier = () => {
 
             <div className="mb-6">
                 <h1 className="text-2xl font-semibold mb-2">
-                    Upload your leaf images to analyze using AI-based Age Identify algorithm
+                    Upload your leaf images to analyze using AI-based{" "}
+                    <span className="text-green-600"> Age Identify </span>
+                    algorithm
                 </h1>
             </div>
 
@@ -304,11 +306,11 @@ const AgeIdentifier = () => {
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.3 }}
                     >
-                        <Link to="/analize">
-                        <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium flex items-center transition-colors">
-                            Analyze
-                            <MdArrowForward className="ml-2" size={20} />
-                        </button>
+                        <Link to="/age-analyze">
+                            <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium flex items-center transition-colors">
+                                Analyze
+                                <MdArrowForward className="ml-2" size={20} />
+                            </button>
                         </Link>
                     </motion.div>
                 )}

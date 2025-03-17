@@ -10,8 +10,10 @@ import AgeIdentifier from "./pages/AgeIdentifier";
 import "./App.css";
 import { useState } from "react";
 import { FaCircleUser } from "react-icons/fa6";
-import Analize from "./pages/Analize";
-import Results from "./pages/ResultPage";
+import DiseaseAnalyze from "./pages/DiseaseAnalyze";
+import DiseaseResultPage from "./pages/DiseaseResultPage";
+import AgeAnalyze from "./pages/AgeAnalyze";
+import AgeResults from "./pages/AgeResultPage";
 
 function App() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -68,16 +70,21 @@ function App() {
                                 element={<DiseaseIdentifier />}
                             />
                             <Route
-                                path="/analize"
-                                element={<Analize />}
+                                path="/disease-analyze"
+                                element={<DiseaseAnalyze />}
                             />
-                              <Route
-                                path="/result"
-                                element={<Results />}
+                            <Route
+                                path="/disease-result"
+                                element={<DiseaseResultPage />}
                             />
                             <Route
                                 path="/age-identifier"
                                 element={<AgeIdentifier />}
+                            />
+                            <Route path="/age-analyze" element={<AgeAnalyze />} />
+                            <Route
+                                path="/age-result"
+                                element={<AgeResults />}
                             />
                             {/* <Route
                                 path="/market-trends"

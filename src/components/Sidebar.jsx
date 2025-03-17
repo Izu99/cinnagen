@@ -25,11 +25,13 @@ const SideBar = () => {
             path: "/disease-identifier",
             name: "Disease Identifier",
             icon: <FaSquareVirus size={collapsed ? 22 : 20} />,
+            subPaths: ["/disease-analyze", "/disease-result"], // Sub paths for active state
         },
         {
             path: "/age-identifier",
             name: "Age Identifier",
             icon: <FaSeedling size={collapsed ? 22 : 20} />,
+            subPaths: ["/age-analyze", "/age-result"], // Sub paths for active state
         },
         {
             path: "/market-trends",
@@ -44,16 +46,24 @@ const SideBar = () => {
         {
             path: "/condition-assesment",
             name: "Condition Assessment",
-            icon: <FaDroplet  size={collapsed ? 22 : 20} />,
+            icon: <FaDroplet size={collapsed ? 22 : 20} />,
         },
     ];
 
-    // Check if current path is empty or invalid and set active to Dashboard
-    const isActive = (path) => {
-        return (
-            location.pathname === path ||
-            (location.pathname === "/" && path === "/dashboard")
-        );
+    // Function to check active state
+    const isActive = (item) => {
+        if (item.path === "/dashboard") {
+            return (
+                location.pathname === "/" || location.pathname === "/dashboard"
+            );
+        }
+        if (item.subPaths) {
+            return (
+                location.pathname === item.path ||
+                item.subPaths.includes(location.pathname)
+            );
+        }
+        return location.pathname === item.path;
     };
 
     return (
@@ -71,17 +81,21 @@ const SideBar = () => {
                 {collapsed ? (
                     <div className="w-8 h-8 relative">
                         <div className="flex items-center w-40">
-                            <img src="./cinna-logo.png" alt="" />
+                            <img src="./cinna-logo.png" alt="Logo" />
                         </div>
                     </div>
                 ) : (
                     <div className="flex items-center w-48">
-                        <img src="./cinna-logo.png" alt="" />
+                        <img src="./cinna-logo.png" alt="Logo" />
                     </div>
                 )}
             </motion.div>
 
-            <div className={`flex-grow overflow-hidden ${collapsed ? "mt-5" : "-mt-5"}`}>
+            <div
+                className={`flex-grow overflow-hidden ${
+                    collapsed ? "mt-5" : "-mt-5"
+                }`}
+            >
                 {menuItems.map((item, index) => (
                     <motion.div
                         key={item.name}
@@ -96,7 +110,7 @@ const SideBar = () => {
                             to={item.path}
                             className={`flex items-center px-4 py-3 my-2 mx-2 font-medium rounded-lg transition-colors duration-200 
                                 ${
-                                    isActive(item.path)
+                                    isActive(item)
                                         ? "bg-white text-green-600"
                                         : "hover:bg-green-700 hover:text-white"
                                 }`}
@@ -117,7 +131,7 @@ const SideBar = () => {
             <div className="px-2 mt-auto">
                 <button
                     onClick={() => setCollapsed(!collapsed)}
-                    className="w-full flex items-center  hover:bg-green-800/20 p-3 rounded-lg transition-colors border-2 border-white"
+                    className="w-full flex items-center hover:bg-green-800/20 p-3 rounded-lg transition-colors border-2 border-white"
                 >
                     <motion.div
                         animate={{ rotate: collapsed ? 180 : 0 }}
@@ -126,7 +140,9 @@ const SideBar = () => {
                     >
                         <FaAnglesLeft size={collapsed ? 25 : 20} />
                     </motion.div>
-                    {!collapsed && <span className="ml-2 font-semibold">Collapse</span>}
+                    {!collapsed && (
+                        <span className="ml-2 font-semibold">Collapse</span>
+                    )}
                 </button>
             </div>
         </motion.div>

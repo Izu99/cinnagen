@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-const Results = ({ results = [] }) => {
+const DiseaseResults = ({ results = [] }) => {
     // If no results are provided, use sample data for demonstration
     const sampleResults = [
         {
@@ -75,6 +75,7 @@ const Results = ({ results = [] }) => {
                         <h3 className="text-lg text-green-800 font-semibold mb-4">
                             Image {index + 1} result
                         </h3>
+
                         <div className="">
                             <img
                                 src={result.imageSrc}
@@ -126,4 +127,4 @@ const Results = ({ results = [] }) => {
     );
 };
 
-export default Results;
+export default DiseaseResults;

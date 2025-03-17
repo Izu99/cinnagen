@@ -1,18 +1,17 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-const Analyze = () => {
+const AgeAnalyze = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
         const redirectTimer = setTimeout(() => {
-            navigate("/result");
+            navigate("/age-result");
         }, 3000);
 
         // Clean up the timer if the component unmounts
         return () => clearTimeout(redirectTimer);
     }, [navigate]);
-
     
     return (
         <div className="flex h-full items-center justify-center">
@@ -32,4 +31,4 @@ const Analyze = () => {
     );
 };
 
-export default Analyze;
+export default AgeAnalyze;
