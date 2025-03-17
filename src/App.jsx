@@ -75,11 +75,11 @@ function App() {
                                 path="/result"
                                 element={<Results />}
                             />
-                            {/* <Route
+                            <Route
                                 path="/age-identifier"
                                 element={<AgeIdentifier />}
                             />
-                            <Route
+                            {/* <Route
                                 path="/market-trends"
                                 element={<MarketTrends />}
                             /> */}
