@@ -14,6 +14,12 @@ import DiseaseAnalyze from "./pages/DiseaseAnalyze";
 import DiseaseResultPage from "./pages/DiseaseResultPage";
 import AgeAnalyze from "./pages/AgeAnalyze";
 import AgeResults from "./pages/AgeResultPage";
+import CinnamonPricePrediction from "./pages/Price";
+import PriceResultsPage from "./pages/PriceResult";
+import PriceAnalyze from "./pages/PriceAnalyze";
+import GradeIdentifier from "./pages/GradeIdentifier";
+import GradeAnalyze from "./pages/GradeAnalyze";
+import GradeResult from "./pages/GradeResult";
 
 function App() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -81,15 +87,38 @@ function App() {
                                 path="/age-identifier"
                                 element={<AgeIdentifier />}
                             />
-                            <Route path="/age-analyze" element={<AgeAnalyze />} />
+                            <Route
+                                path="/age-analyze"
+                                element={<AgeAnalyze />}
+                            />
                             <Route
                                 path="/age-result"
                                 element={<AgeResults />}
                             />
-                            {/* <Route
-                                path="/market-trends"
-                                element={<MarketTrends />}
-                            /> */}
+                            <Route
+                                path="/price-identifier"
+                                element={<CinnamonPricePrediction />}
+                            />
+                            <Route
+                                path="/price-analyze"
+                                element={<PriceAnalyze />}
+                            />
+                            <Route
+                                path="/price-prediction"
+                                element={<PriceResultsPage />}
+                            />
+                            <Route
+                                path="/grade-identifier"
+                                element={<GradeIdentifier />}
+                            />
+                            <Route
+                                path="/grade-analyze"
+                                element={<GradeAnalyze />}
+                            />
+                            <Route
+                                path="/grade-prediction"
+                                element={<GradeResult />}
+                            />
                         </Routes>
                     </div>
                 </div>

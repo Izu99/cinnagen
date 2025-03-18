@@ -18,7 +18,7 @@ const Dashboard = () => {
                             Recent Analysis
                         </h2>
                         <p className="text-gray-600">
-                            View your recent tea leaf analysis results
+                            View your recent cinnamon leaf analysis results
                         </p>
                     </div>
 
@@ -27,7 +27,7 @@ const Dashboard = () => {
                             Health Status
                         </h2>
                         <p className="text-gray-600">
-                            Overall health status of your tea plants
+                            Overall health status of your cinnamon plants
                         </p>
                     </div>
 
@@ -36,7 +36,7 @@ const Dashboard = () => {
                             Recommendations
                         </h2>
                         <p className="text-gray-600">
-                            Custom recommendations for your tea garden
+                            Custom recommendations for your cinnamon garden
                         </p>
                     </div>
                 </div>

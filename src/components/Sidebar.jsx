@@ -34,14 +34,16 @@ const SideBar = () => {
             subPaths: ["/age-analyze", "/age-result"], // Sub paths for active state
         },
         {
-            path: "/market-trends",
-            name: "Market Trends",
+            path: "/price-identifier",
+            name: "Price Prediction",
             icon: <FaChartColumn size={collapsed ? 22 : 20} />,
+            subPaths: ["/price-analyze", "/price-prediction"], // Sub paths for active state
         },
         {
-            path: "/grading",
+            path: "/grade-identifier",
             name: "Grading",
             icon: <FaBorderAll size={collapsed ? 22 : 20} />,
+            subPaths: ["/grade-analyze", "/grade-result"], // Sub paths for active state
         },
         {
             path: "/condition-assesment",
